@@ -162,3 +162,4 @@ for filename in os.listdir(input_dir):
         hasil_perspektif_gray = apply_perspective_transform(gray, pts1_perspektif, pts2_perspektif)
         # show_gray(f"Perspektif Grayscale ({filename})", hasil_perspektif_gray) # Hapus atau komen untuk non-interaktif
         save_transformed_image(filename, hasil_perspektif_gray, "perspektif")
+print(f"Processing: {filename}")
