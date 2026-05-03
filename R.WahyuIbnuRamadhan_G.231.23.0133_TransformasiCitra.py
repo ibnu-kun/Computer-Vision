@@ -106,6 +106,9 @@ for filename in os.listdir(input_dir):
 
         print(f"\nMemproses gambar: {filename}")
 
+        # 0. Simpan Grayscale Original
+        save_transformed_image(filename, gray, "grayscale")
+
         # 1. Translasi
         hasil_translasi_gray = apply_translation(gray, 50, 30)
         # show_gray(f"Translasi Grayscale ({filename})", hasil_translasi_gray) # Hapus atau komen untuk non-interaktif
@@ -162,4 +165,3 @@ for filename in os.listdir(input_dir):
         hasil_perspektif_gray = apply_perspective_transform(gray, pts1_perspektif, pts2_perspektif)
         # show_gray(f"Perspektif Grayscale ({filename})", hasil_perspektif_gray) # Hapus atau komen untuk non-interaktif
         save_transformed_image(filename, hasil_perspektif_gray, "perspektif")
-print(f"Processing: {filename}")
